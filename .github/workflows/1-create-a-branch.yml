@@ -33,10 +33,13 @@ jobs:
 
     steps:
       # We'll need to check out the repository so that we can edit the README
-      #- name: Checkout
-       # uses: actions/checkout@v2
-        #with:
-         # fetch-depth: 0 # Let's get all the branches
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Let's get all the branches
+      - name: verify
+        run:
+          echo git status
 
       # Update README to close <details id=1> and open <details id=2>
       # and set STEP to '2'
