@@ -50,3 +50,4 @@ jobs:
           from_step: 1
           to_step: 2
           branch_name: my-first-branch
+          base_branch_name: main
