@@ -33,10 +33,10 @@ jobs:
 
     steps:
       # We'll need to check out the repository so that we can edit the README
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # Let's get all the branches
+      #- name: Checkout
+       # uses: actions/checkout@v2
+        #with:
+         # fetch-depth: 0 # Let's get all the branches
 
       # Update README to close <details id=1> and open <details id=2>
       # and set STEP to '2'
@@ -46,3 +46,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           from_step: 1
           to_step: 2
+          branch_name: my-first-branch
